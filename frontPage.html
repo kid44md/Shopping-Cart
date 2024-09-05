@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shop Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/frontPageStyle.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="shop-header">
+        <div class="shop-user-name-container">
+            <div class="shop-user-name-input">
+                <h3>Enter your name:</h3>
+                <input type="text" id="customer" placeholder="enter your name"><button id="addCustomer">Submit</button>
+                <p id="noNameError"></p>
+            </div>
+            <div class="shop-user-name">
+                <p id="customer-name">
+                </p>
+            </div>
+        </div>
+        <div class="shop-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <div class="cart-nav-container">
+                    <li><a href="checkout.html"  name="cart" class="fas shopping-cart-icon">&#xf07a</a><span><strong
+                                id="cart-count"></strong>
+                        </span></li>
+                </div>
+                <li><a href="#" name="checkout">Check Out</a>
+
+                </li>
+
+            </ul>
+        </div>
+        <div class="shop-brand">
+            <a href="#">
+                <img src="assets/mcdonalds_PNG19.png" alt="McDonalds Logo">
+            </a>
+        </div>
+    </div>
+    <div class="No-items">
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-header">
+            <h3>Cart</h3>
+        </div>
+        <div class="cart-info">
+            <ul id="cart-list">
+                <!-- <li>
+                    <img src="assets/two_cheeseburger_meals.PNG">
+                    <div>
+                        <p>Name: burger</p>
+                        <p>price: $6</p>
+                    </div>
+                    <div class="cart-buttons">
+                        <button>+</button>
+                        <span><strong>count 6</strong></span>
+                        <button>-</button>
+                    </div>
+                </li> -->
+                <!--  -->
+
+                <!--  -->
+            </ul>
+        </div>
+        <div class="cart-total-container" id="">
+            <div class="total">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <hr>
+    <div id="food-header">
+        <h2>Meals</h2>
+    </div>
+
+    <div class="food-container">
+        <div class="item1">
+            <!-- <div class="item-icon">
+                <img src="assets/two_cheeseburger_meals.PNG" alt=" cheeseburger meal">
+            </div>
+            <div class="item-information">
+                <p> <strong>cheeseburger meal</strong></p>
+                <p> <strong>Quantity</strong>:<strong> 10</strong></p>
+                <p> <strong>Price</strong>:<strong> $14.99 </strong></p>
+                <div class="item-input">
+                    <input type="number" placeholder="1" name="cheeseburger" min="0" max="10" step="1"
+                        oninput="this.value = Math.abs(this.value)">
+                    <button type="click" name="add">Add item</button>
+                    <input type="number" placeholder="1" name="cheeseburger" min="0" max="10" step="1"
+                        oninput="this.value = Math.abs(this.value)">
+                    <button type="click" name="remove">remove item</button>
+                    <button type="click" name="removeAll">Remove All Items</button>
+                </div>
+            </div>
+
+            <div class="item-error">
+                <p style="color: red;">Over the max limit, please adjust the quantity</p>
+            </div>
+            <div class="item-empty">
+                <p>Cheeseburger Meal is out of stock</p>
+            <!-- </div> -->
+        </div>
+    </div>
+    <hr>
+    <div id="drink-header">
+        <h2>Drinks</h2>
+    </div>
+    <div class="drink-container">
+
+    </div>
+
+
+
+
+</body>
+
+
+<script src="src/scripts/shop.js">
+</script>
+
+</html>
