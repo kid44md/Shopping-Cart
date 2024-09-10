@@ -64,9 +64,9 @@ function paymentSubmit(event) {
     let payment = Number(document.getElementsByName('payment')[0].value);
     let error_form = document.getElementById('error-form');
     let error_payment = document.getElementById('error-payment');
-    
+
     let change = payment - total;
-   
+
     if (!address) {
         error_form.innerText = "(ADDRESS MISSING)- please, enter an address";
     } else if (!city) {
@@ -78,13 +78,17 @@ function paymentSubmit(event) {
     } else if (!payment) {
         error_payment.innerText = "(MISSING PAYMENT)- please, enter a payment";
     } else {
-        if(payment < total){
+        if (payment < total) {
             error_payment.innerText = "Your payment is enough to complete the transaction";
-        }else{
+        } else {
             error_payment.innerText = "";
             change_display.innerHTML = `<p><strong>Your change is: $${change.toFixed(2)}</strong></p>`;
             total_display.innerHTML = "";
             success.innerHTML = "<h3>Your payment is sucessful!....food is on the way</h3>";
+            setTimeout(() => {
+                localStorage.removeItem('cart');
+                window.location.assign("http://127.0.0.1:3000/Shopping-Cart/frontPage.html");
+            }, 5000)
         }
     }
 }
